@@ -54,7 +54,7 @@ app.post('/traducir', async (req, res) => {
 });
 
 // Iniciar el servidor
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor de IA corriendo en http://localhost:${PORT}`);
   console.log(`Dile a Flutter que envíe un POST a http://localhost:${PORT}/traducir`);
